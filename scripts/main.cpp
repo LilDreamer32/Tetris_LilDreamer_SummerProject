@@ -1,7 +1,11 @@
 #include <SDL.h>
+#include "input.h"
+#include <string>
+//#include <SDL_image.h>
 
 int main(int argc, char* args []) {
     SDL_Init(SDL_INIT_VIDEO);
+
 
     SDL_Window* window = SDL_CreateWindow("Blank Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, SDL_WINDOW_SHOWN);
     if (window == nullptr) {
@@ -22,16 +26,27 @@ int main(int argc, char* args []) {
 
     while (running) {
         // Close window with any input
+
+
         while (SDL_PollEvent(&event)) {
-            if (event.type == SDL_QUIT || event.type == SDL_KEYDOWN || event.type == SDL_MOUSEBUTTONDOWN) {
+            if (event.type == SDL_QUIT) {
                 running = false;
                 break;
             }
         }
 
+
+
+        //draw player
+        //SDL_Texture *texture;
+        //std::string filename = "C:\\Users\\Schellingerj\\CLionProjects\\Tetris 4.0\\SDL2\\images\\huh.png";
+        //texture = ();
+
         SDL_SetRenderDrawColor(renderer, 100, 100, 180, 255); // Set the background color to purple
         SDL_RenderClear(renderer);
         SDL_RenderPresent(renderer);
+
+
     }
 
     SDL_DestroyRenderer(renderer);
