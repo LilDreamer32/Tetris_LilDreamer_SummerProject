@@ -1,7 +1,7 @@
 #include <SDL.h>
 #include "input.h"
 #include <string>
-//#include <SDL_image.h>
+#include <SDL_image.h>
 
 int main(int argc, char* args []) {
     SDL_Init(SDL_INIT_VIDEO);
@@ -38,8 +38,8 @@ int main(int argc, char* args []) {
 
 
         //draw player
-        //SDL_Texture *texture;
-        //std::string filename = "C:\\Users\\Schellingerj\\CLionProjects\\Tetris 4.0\\SDL2\\images\\huh.png";
+        SDL_Texture *texture;
+        std::string filename = "C:\\Users\\Schellingerj\\CLionProjects\\Tetris 4.0\\SDL2\\images\\huh.png";
         //texture = ();
 
         SDL_SetRenderDrawColor(renderer, 100, 100, 180, 255); // Set the background color to purple
